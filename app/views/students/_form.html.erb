@@ -21,13 +21,15 @@
   </div>
   <div class="field">
     <%= f.label :age %><br>
-    <%= f.select :age, ((18..30).map {|i| [i,i] } ) %>
+    <%= f.select :age, ((18..30).map {|i| [i,i] } ), :prompt => 'Select Age' %>
   </div>
   <div class="field">
     <%= f.label :college %><br>
-    <%= f.select :college, [ 'UCC','UCD','NUI Galway' ], :prompt => 'Select One' %>
+    <%= f.collection_select :college_id, College.all, :id, :name, :prompt => 'Select College' %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+
