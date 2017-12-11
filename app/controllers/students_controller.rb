@@ -1,14 +1,19 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
 
-  # GET /students
-  # GET /students.json
   def index
     @students = Student.all
+    respond_to do |format|
+      format.xml  { render xml: @students}
+      format.json { render json: @students}
+    end 
   end
 
-  # GET /students/1
-  # GET /students/1.json
+  def render_student_list
+    # render student list partial 
+    # render json @students    
+  end
+  
   def show
   end
 

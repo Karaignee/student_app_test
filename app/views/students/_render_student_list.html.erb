@@ -1,0 +1,20 @@
+_render_student_list.html.erb
+
+Step 1:
+Students Controller Action to create a json array of the student list
+called render_student_list
+
+Step 2
+Route the controller action in a get request, I've currently written this as:
+get '/students' => "render_student_list#students"
+
+Step 3
+Create a partial (this current file).
+
+Step 4
+Create a jQuery file with a .js.erb extension for the partial, and write a statement to trigger the lists rendering.
+
+Step 5
+Add a button link into the student index view to trigger the get request to the Student controller, use :remote => true
+
+Within the timeframe, I was not able to complete this part of the test.  To fill in the blanks I will review the rails guides for Ajax, there is an old RailsCast on this, and any other suggestions welcome!
