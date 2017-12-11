@@ -31,11 +31,11 @@
         <!-- TODO: required does not work for  dropdown and checkbox -->
 
   </div>
-    <div class="field">
+    <div class="checkbox">
     <%= f.label :doing_internship %><br>
     <%= f.check_box :doing_internship %>
   </div>
-  <div class="field">
+  <div class="field" style="display:none;">
     <%= f.label :internship_company %><br>
     <%= f.text_field :internship_company %>
   </div>
@@ -45,11 +45,11 @@
   </div>
 <% end %>
 
+
 <script type="text/javascript">
-if(document.getElementById('student_doing_internship').checked) {
-    $("#student_internship_company").show();
-} else {
-    $("#student_internship_company").hide();
-}
+$(".checkbox").click(function(){
+   
+   $(this).next("div").toggle();    
+});
 </script>
 
