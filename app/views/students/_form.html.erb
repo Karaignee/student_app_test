@@ -27,6 +27,15 @@
     <%= f.label :college %><br>
     <%= f.collection_select :college_id, College.all, :id, :name, :prompt => 'Select College' %>
   </div>
+    <div class="field">
+    <%= f.label :doing_internship %><br>
+    <%= f.check_box :doing_internship %>
+  </div>
+  <div class="field">
+    <%= f.label :internship_company %><br>
+    <%= f.text_field :internship_company %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
