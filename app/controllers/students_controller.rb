@@ -3,10 +3,6 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.all
-    respond_to do |format|
-      format.xml  { render xml: @students}
-      format.json { render json: @students}
-    end 
   end
 
   def render_student_list
