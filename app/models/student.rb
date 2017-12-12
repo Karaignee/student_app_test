@@ -1,7 +1,12 @@
 class Student < ActiveRecord::Base
 before_save :has_internship_company
 
+#normal validation 
 validates :name, :email, :age, presence: true
+
+#validate that name is Kyle
+# VALID_NAME = %w(Kyle)
+# validates_inclusion_of :name, :in => VALID_NAME
 
 belongs_to :college
 
